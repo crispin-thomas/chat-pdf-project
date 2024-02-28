@@ -55,9 +55,9 @@ export async function GET() {
           quantity: 1,
         },
       ],
-      metadata: [userId],
+      metadata: { userId },
     });
-    
+
     return NextResponse.json({ url: stripeSession.url });
   } catch (error) {
     console.log(error);
